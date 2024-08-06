@@ -15,6 +15,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MultiProvider(
+      //プロダイダーを使うためにMultiProviderを使う
       providers: [
         ChangeNotifierProvider(create: (_) => Counter()),
         Provider(create: (context) => CountController(context.read<Counter>())),
